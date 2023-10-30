@@ -1,4 +1,4 @@
-class DirectorsController < ApplictionController 
+class DirectorsController < ApplicationController 
   def index 
     render({ :template => "director_templates/list"})
   end 
