@@ -15,15 +15,15 @@ class DirectorsController < ApplicationController
   def youngest 
     birthday_directors = Director.where.not({ :dob => nil })
     age = 0 
-    youngest_director = "" 
+    @youngest_director = "" 
     birthday_directors.all.each do |a_director|
       director_age = Date.today - a_director.dob
       if age > director_age
         age = age 
-        youngest_director = youngest_director
+        @youngest_director = youngest_director
       else 
         age = director_age
-        youngest_director = a_director.name
+        @youngest_director = a_director.name
       end 
     end 
     render({ :template => "director_templates/youngest"})
