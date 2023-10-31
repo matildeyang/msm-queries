@@ -43,5 +43,6 @@ class DirectorsController < ApplicationController
         @oldest_director = a_director.name
       end 
     end 
+    render({ :template => "director_templates/eldest"})
   end 
 end 
