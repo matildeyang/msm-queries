@@ -34,6 +34,7 @@
     <th>Year</th>
     <th>Director</th>
     <th>Character name</th>
+    <th></th>
   </tr>
 
   <% matching_characters.each do |a_character|%>
@@ -50,6 +51,10 @@
         <%= the_director.name %>
       </td>
       <td><%= a_character.name %></td>
+      <td>
+        <a href="/movies/<%=the_movie.id%>">
+        Show details
+      </td>
     </tr>
   <% end %>
 </table>

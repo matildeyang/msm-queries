@@ -11,4 +11,16 @@ class DirectorsController < ApplicationController
    @the_director = matching_records.at(0)
    render({ :template => "director_templates/details"})
   end 
+
+  def youngest 
+    birthday_directors = Director.where.not({ :dob => nil })
+    age = 0 
+    birthday_directors.all.each do |a_director|
+      director_age = Date.today - a_director.dob
+      
+    end 
+  end 
+
+  def oldest 
+  end 
 end 

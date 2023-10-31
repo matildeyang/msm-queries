@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 # index as action name is used for displaying lists 
   get("/directors", { :controller => "directors", :action => "index"})
   get("/directors/:the_id", { :controller => "directors", :action => "show"})
+  get("/directors/youngest", { :controller => "directors", :action => "youngest"})
+  get("/directors/youngest", { :controller => "directors", :action => "oldest"})
 
   get("/actors", { :controller => "actors", :action => "index"})
   get("/actors/:the_id", { :controller => "actors", :action => "show"})
